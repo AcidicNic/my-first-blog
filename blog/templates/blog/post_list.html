@@ -1,24 +1,63 @@
-<html>
-    <head>
-        <title>idk man</title>
-    </head>
-    <body>
-        <p>aescfghvjcfjvbydgvkehjfvyieru rehbv ihwbvijhfdbovc hurqbfcoudszbvuhrbvjhasd uhfg hjbsadkjfhb sadjhfgbos dfbhj</p>
-        <img src="http://boredomtherapy.com/wp-content/uploads/2016/03/2-green-frog-eats-snake.jpg">
-        <div>
-            <h1><a href="">binch</a></h1>
-        </div>
+<html> <head>
+    <title>idk man</title>
+<style type="text/css">
+  @font-face { font-family: CI; src: url('.. .. .. ../fonts/CURIOUS-INCIDENT.ttf'); }
+  @font-face { font-family: LX; src: url('.. .. .. ../fonts/LEIXO.ttf'); }
+  @font-face {
+    font-family: RW;
+    src: local('fonts/Raleway.ttf');
+  }
+  @font-face { font-family: RE; src: url('.. .. .. ../fonts/Rounded-Elegance.ttf'); }
+  body {
+    background-color: #202021;
+    color: #fff;
+  }
+  h1 {
+    font-family: RW;
+  }
+  img {
+    width: 30%;
+  }
+  #header {
+    margin: auto;
+    text-align: center;
+  }
+  .pageWrap {
+    margin: auto;
+    width: 80%;
+  }
+  .postDate {
+    text-align: right;
+    padding: 1%
+  }
+  .postTitle{
+    text-align: center;
+  }
+  .postText {
+    text-align: left;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  #postWrap {
+    background-color: #353538;
+    width: 80%;
+    margin: auto;
+  }
+</style>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>aescfghvjcfjvbydgvkehjfvyieru rehbv ihwbvijhfdbovc hurqbfcoudszbvuhrbvjhasd uhfg hjbsadkjfhb sadjhfgbos dfbhj</p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>aescfghvjcfjvbydgvkehjfvyieru rehbv ihwbvijhfdbovc hurqbfcoudszbvuhrbvjhasd uhfg hjbsadkjfhb sadjhfgbos dfbhj</p>
-        </div>
-    </body>
-</html>
+</head> <body>
+  <div id="header">
+    <h1>wow</h1>
+    <p>aescfghvjcfjvbydgvkehjfvyieru rehbv ihwbvijhfdbovc hurqbfcoudszbvuhrbvjhasd uhfg hjbsadkjfhb sadjhfgbos dfbhj</p>
+    <img src="http://boredomtherapy.com/wp-content/uploads/2016/03/2-green-frog-eats-snake.jpg">
+  </div>
+<div id="pageWrap">
+ {% for post in posts %}
+  <div id=postWrap>
+    <h1 class="postTitle"><a href="">{{ post.title }}</a></h1>
+    <p class="postText">{{ post.text|linebreaksbr }}</p>
+    <p class="postDate">published: {{ post.published_date }}</p>
+  </div>
+ {% endfor %}
+</div>
+</body> </html>
