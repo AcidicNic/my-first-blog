@@ -25,7 +25,7 @@ SECRET_KEY = 'ryjap8x2z7#b&j06%9k^h56fy@u0si=y_rvyk@+(dw@x_x5jx='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'snekek.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'snek.pythonanywhere.com']
 
 
 # Application definition
